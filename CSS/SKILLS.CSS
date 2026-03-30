@@ -1,0 +1,127 @@
+
+
+.back-home-container {
+    display: flex;
+    justify-content: center; 
+  align-items: center;
+}
+
+
+.back-home {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #00bfff, #00ffff);
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,191,255,0.4);
+}
+
+/* hover */
+.back-home:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,191,255,0.6);
+    background: linear-gradient(135deg, #00ffff, #00bfff);
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0b0b2a;
+    color: #fff;
+    direction: rtl;
+}
+
+#skills {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #00bfff;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+
+
+.skills-category {
+    margin-bottom: 40px;
+}
+
+
+.skills-category h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #00ffff;
+}
+
+
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill span {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.progress {
+    width: 100%;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #00bfff, #00ffff);
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+}
+
+
+.soft-skills, .tools {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 0;
+}
+
+.soft-skills li, .tools li {
+    background: rgba(0, 191, 255, 0.2);
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 500;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.soft-skills li:hover, .tools li:hover {
+    transform: translateY(-3px);
+    background: rgba(0, 191, 255, 0.6);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .soft-skills, .tools {
+        flex-direction: column;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .skills-category h3 {
+        font-size: 1.5rem;
+    }
+}
