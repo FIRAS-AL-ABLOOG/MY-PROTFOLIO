@@ -1,0 +1,296 @@
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.Footer {
+    width: 100%;
+    padding: 70px 7% 25px;
+    background: #32324200;
+    color: #ffffff;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   FOOTER SECTIONS
+===================================================== */
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+/* العناوين */
+
+.footer-section h2 {
+    margin: 0 0 10px;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    color: #ffffff;
+
+    position: relative;
+}
+
+
+/* الخط الصغير تحت العنوان */
+
+.footer-section h2::after {
+    content: "";
+
+    display: block;
+
+    width: 45px;
+    height: 3px;
+
+    margin-top: 8px;
+
+    background: linear-gradient(
+        90deg,
+        #00e5ff,
+        #8a2be2
+    );
+
+    border-radius: 10px;
+}
+
+
+/* =====================================================
+   TEXT
+===================================================== */
+
+.footer-section p {
+    margin: 0;
+
+    color: #a9a9b3;
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   LIST
+===================================================== */
+
+.footer-section ul {
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+.footer-section li {
+      color: #a9a9b3;
+    direction: rtl;
+    text-align: right;
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+.footer-section li strong,
+.footer-section li span {
+    direction: ltr;
+    unicode-bidi: isolate;
+}
+
+/* حركة بسيطة عند المرور */
+
+.footer-section li:hover {
+    color: #ffffff;
+
+    transform: translateX(5px);
+}
+
+
+/* السعر */
+
+.footer-section strong {
+    color: #00e5ff;
+
+    margin-right: 5px;
+}
+
+
+/* =====================================================
+   FOOTER NOTE
+===================================================== */
+
+.footer-note {
+    margin-top: 5px !important;
+
+    padding: 10px 12px;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    border-left: 3px solid #8a2be2;
+
+    border-radius: 5px;
+}
+
+
+/* =====================================================
+   SOCIAL MEDIA
+===================================================== */
+
+.social-links {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.social-links a {
+    width: fit-content;
+
+    color: #a9a9b3;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+
+.social-links a:hover {
+    color: #00e5ff;
+
+    transform: translateX(6px);
+}
+
+
+/* =====================================================
+   FOOTER BOTTOM
+===================================================== */
+
+.footer-bottom {
+    grid-column: 1 / -1;
+
+    margin-top: 30px;
+
+    padding-top: 30px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    text-align: center;
+}
+
+
+.footer-bottom h2 {
+    margin: 0 0 12px;
+
+    font-size: 24px;
+
+    background: linear-gradient(
+        90deg,
+        #00e5ff,
+        #8a2be2
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.footer-bottom p {
+    margin: 8px 0;
+
+    color: #888894;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .Footer {
+        grid-template-columns: repeat(2, 1fr);
+
+        padding: 60px 5% 25px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .Footer {
+        grid-template-columns: 1fr;
+
+        padding: 50px 25px 20px;
+
+        gap: 35px;
+    }
+
+
+    .footer-section {
+        text-align: center;
+
+        align-items: center;
+    }
+
+
+    .footer-section h2::after {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .footer-section ul {
+        align-items: center;
+    }
+
+
+    .footer-section li:hover {
+        transform: none;
+    }
+
+
+    .social-links {
+        align-items: center;
+    }
+
+
+    .social-links a:hover {
+        transform: none;
+    }
+
+
+    .footer-bottom {
+        margin-top: 10px;
+    }
+
+
+    .footer-bottom h2 {
+        font-size: 20px;
+    }
+
+}

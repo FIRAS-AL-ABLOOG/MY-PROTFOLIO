@@ -1,0 +1,277 @@
+/* ==========================================
+   معرض أعمالي
+   ========================================== */
+
+.projects {
+  width: 100%;
+  padding: 70px 25px 50px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 35px;
+
+  direction: rtl;
+}
+
+/* ==========================================
+   العنوان
+   ========================================== */
+
+.projects h1 {
+  position: relative;
+
+  margin: 0;
+
+  color: #f8fafc;
+
+  font-size: 42px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  text-align: center;
+}
+
+/* الخط تحت العنوان */
+
+.projects h1::after {
+  content: "";
+
+  display: block;
+
+  width: 70px;
+  height: 4px;
+
+  margin: 14px auto 0;
+
+  border-radius: 20px;
+
+  background: linear-gradient(
+    90deg,
+    #00d4ff,
+    #7c3aed
+  );
+}
+
+/* ==========================================
+   حاوية الأزرار
+   ========================================== */
+
+.projects-buttons {
+  width: 100%;
+  max-width: 900px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 22px;
+
+  flex-wrap: wrap;
+}
+
+/* ==========================================
+   الزر الأساسي
+   ========================================== */
+
+.project-button {
+  position: relative;
+
+  min-width: 220px;
+
+  padding: 18px 30px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 18px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-radius 0.3s ease;
+}
+
+/* ==========================================
+   تأثير اللمعة
+   ========================================== */
+
+.project-button::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 80%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+
+  transform: skewX(-25deg);
+
+  transition: left 0.6s ease;
+}
+
+.project-button:hover::before {
+  left: 140%;
+}
+
+/* ==========================================
+   حركة الزر
+   ========================================== */
+
+.project-button:hover {
+  transform: translateY(-8px) scale(1.03);
+
+  border-radius: 24px;
+}
+
+.project-button:active {
+  transform: translateY(-2px) scale(0.98);
+}
+
+/* ==========================================
+   Website
+   أزرق سماوي → أزرق → بنفسجي
+   ========================================== */
+
+.project-button:nth-child(1) {
+  background: linear-gradient(
+    135deg,
+    #00c6ff,
+    #0072ff,
+    #6d28d9
+  );
+
+  box-shadow:
+    0 10px 30px rgba(0, 114, 255, 0.25),
+    inset 0 1px 1px rgba(255, 255, 255, 0.25);
+}
+
+/* ==========================================
+   App
+   بنفسجي → وردي
+   ========================================== */
+
+.project-button:nth-child(2) {
+  background: linear-gradient(
+    135deg,
+    #7c3aed,
+    #c026d3,
+    #ec4899
+  );
+
+  box-shadow:
+    0 10px 30px rgba(192, 38, 211, 0.25),
+    inset 0 1px 1px rgba(255, 255, 255, 0.25);
+}
+
+/* ==========================================
+   BackEnd
+   أخضر → تركوازي
+   ========================================== */
+
+.project-button:nth-child(3) {
+  background: linear-gradient(
+    135deg,
+    #059669,
+    #10b981,
+    #14b8a6
+  );
+
+  box-shadow:
+    0 10px 30px rgba(16, 185, 129, 0.25),
+    inset 0 1px 1px rgba(255, 255, 255, 0.25);
+}
+
+/* ==========================================
+   Hover - Website
+   ========================================== */
+
+.project-button:nth-child(1):hover {
+  box-shadow:
+    0 18px 45px rgba(0, 198, 255, 0.45),
+    0 0 25px rgba(0, 114, 255, 0.25);
+}
+
+/* ==========================================
+   Hover - App
+   ========================================== */
+
+.project-button:nth-child(2):hover {
+  box-shadow:
+    0 18px 45px rgba(236, 72, 153, 0.45),
+    0 0 25px rgba(192, 38, 211, 0.25);
+}
+
+/* ==========================================
+   Hover - BackEnd
+   ========================================== */
+
+.project-button:nth-child(3):hover {
+  box-shadow:
+    0 18px 45px rgba(20, 184, 166, 0.45),
+    0 0 25px rgba(16, 185, 129, 0.25);
+}
+
+/* ==========================================
+   الموبايل
+   ========================================== */
+
+@media (max-width: 768px) {
+
+  .projects {
+    padding: 50px 18px 35px;
+
+    gap: 28px;
+  }
+
+  .projects h1 {
+    font-size: 30px;
+  }
+
+  .projects-buttons {
+    flex-direction: column;
+
+    gap: 16px;
+  }
+
+  .project-button {
+    width: 100%;
+
+    max-width: 340px;
+
+    min-width: 0;
+
+    padding: 16px 25px;
+
+    font-size: 17px;
+  }
+
+  .project-button:hover {
+    transform: translateY(-4px) scale(1.01);
+  }
+}

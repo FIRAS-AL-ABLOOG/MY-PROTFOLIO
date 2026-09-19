@@ -1,0 +1,334 @@
+/* =========================================
+   TOOLS SECTION
+========================================= */
+
+.tools-section {
+    width: 100%;
+
+    padding: 80px 7%;
+
+    background: #0b0b0f81;
+
+    color: #ffffff;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.tools-header {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+
+.tools-header span {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: #00e5ff;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+
+.tools-header h2 {
+    margin: 0 0 15px;
+
+    font-size: 34px;
+
+    font-weight: 800;
+}
+
+
+.tools-header p {
+    max-width: 600px;
+
+    margin: auto;
+
+    color: #8f8f9a;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   TOOLS CONTAINER
+========================================= */
+
+.tools-container {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+
+/* =========================================
+   TOOL CARD
+========================================= */
+
+.tool-card {
+    min-height: 90px;
+
+    padding: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    background: #111116;
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    border-radius: 14px;
+
+    box-sizing: border-box;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition: 0.3s ease;
+}
+
+
+/* الخط العلوي */
+
+.tool-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 0%;
+
+    height: 2px;
+
+    background: linear-gradient(
+        90deg,
+        #00e5ff,
+        #8a2be2
+    );
+
+    transition: 0.3s ease;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.tool-card:hover {
+
+    transform: translateY(-5px);
+
+    background: #15151c;
+
+    border-color: rgba(0, 229, 255, 0.3);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+
+.tool-card:hover::before {
+    width: 100%;
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.tool-icon {
+
+    width: 55px;
+    height: 55px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #191920;
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    border-radius: 13px;
+
+    font-size: 29px;
+
+    transition: 0.3s ease;
+}
+
+
+/* حجم SVG */
+
+.tool-icon svg {
+
+    width: 29px;
+    height: 29px;
+}
+
+
+/* حركة الأيقونة */
+
+.tool-card:hover .tool-icon {
+
+    transform: scale(1.1);
+
+    background: #1c1c25;
+}
+
+
+/* =========================================
+   TOOL INFO
+========================================= */
+
+.tool-info {
+
+    min-width: 0;
+}
+
+
+.tool-info h3 {
+
+    margin: 0 0 5px;
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+    font-weight: 700;
+}
+
+
+.tool-info p {
+
+    margin: 0;
+
+    color: #777783;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .tools-container {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .tools-section {
+
+        padding: 60px 20px;
+
+    }
+
+
+    .tools-header h2 {
+
+        font-size: 27px;
+
+    }
+
+
+    .tools-header p {
+
+        font-size: 14px;
+
+    }
+
+
+    .tools-container {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 12px;
+
+    }
+
+
+    .tool-card {
+
+        padding: 14px;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 10px;
+
+    }
+
+
+    .tool-icon {
+
+        width: 45px;
+
+        height: 45px;
+
+        font-size: 23px;
+
+    }
+
+
+    .tool-icon svg {
+
+        width: 23px;
+
+        height: 23px;
+
+    }
+
+
+    .tool-info h3 {
+
+        font-size: 14px;
+
+    }
+
+
+    .tool-info p {
+
+        font-size: 11px;
+
+    }
+
+}

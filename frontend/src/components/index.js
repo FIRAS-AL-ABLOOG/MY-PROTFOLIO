@@ -1,0 +1,10 @@
+export { default as NameAndEmage} from './NameAndEmage/NameAndEmage.jsx';
+export { default as Navbare} from './Navbare/Navbare.jsx';
+export { default as Maind} from './Maind/Maind.jsx';
+export { default as Consultation} from './Consultation/Consultation.jsx';
+export { default as Projects} from './Projects/Projects.jsx';
+export { default as BackEnd} from './BackEnd/BackEnd.jsx';
+export { default as App} from './App/App.jsx';
+export { default as Websites} from './Website/Website.jsx';
+export { default as Footer} from './Footer/Footer.jsx';
+export { default as Tools} from './Tools/Tools.jsx';

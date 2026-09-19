@@ -1,0 +1,1282 @@
+/* =========================================================
+   BACKEND PAGE
+========================================================= */
+
+.backend-page {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 80px 6%;
+
+  direction: rtl;
+
+  color: #ffffff;
+
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(67, 100, 247, 0.08),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(255, 84, 71, 0.07),
+      transparent 30%
+    );
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.backend-header {
+  text-align: center;
+
+  margin-bottom: 65px;
+}
+
+
+.backend-small-title {
+  display: block;
+
+  direction: ltr;
+
+  margin-bottom: 10px;
+
+  font-family: monospace;
+
+  font-size: 11px;
+
+  letter-spacing: 4px;
+
+  opacity: 0.45;
+}
+
+
+.backend-header h1 {
+  margin: 0;
+
+  direction: ltr;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(52px, 7vw, 85px);
+
+  font-weight: 800;
+
+  font-style: italic;
+
+  letter-spacing: -2px;
+
+  background: linear-gradient(
+    135deg,
+    #0052d4,
+    #4364f7,
+    #ff5447
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.backend-title-line {
+  width: 100px;
+  height: 3px;
+
+  margin: 15px auto;
+
+  border-radius: 20px;
+
+  background: linear-gradient(
+    90deg,
+    #0052d4,
+    #4364f7,
+    #ff5447
+  );
+}
+
+
+.backend-header p {
+  margin: 15px auto 0;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  opacity: 0.55;
+}
+
+
+/* =========================================================
+   NODE RUNTIME
+========================================================= */
+
+.runtime-section {
+  max-width: 900px;
+
+  margin: 0 auto 65px;
+
+  position: relative;
+
+  direction: rtl;
+}
+
+
+.runtime-line {
+  width: 2px;
+
+  height: 100%;
+
+  position: absolute;
+
+  right: 20px;
+
+  top: 0;
+
+  background: linear-gradient(
+    to bottom,
+    #0052d4,
+    #4364f7,
+    #ff5447
+  );
+}
+
+
+.runtime-content {
+  padding-right: 60px;
+
+  padding-left: 10px;
+
+  position: relative;
+
+  text-align: right;
+}
+
+
+.runtime-number {
+  position: absolute;
+
+  right: 0;
+
+  top: 0;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #0d1020;
+
+  border: 2px solid #4364f7;
+
+  direction: ltr;
+
+  font-family: monospace;
+
+  font-size: 10px;
+}
+
+
+.runtime-content h2 {
+  margin: 0;
+
+  font-size: 27px;
+
+  font-weight: 500;
+
+  line-height: 1.7;
+
+  direction: rtl;
+}
+
+
+.runtime-content h2 strong {
+  direction: ltr;
+
+  display: inline-block;
+
+  background: linear-gradient(
+    135deg,
+    #0052d4,
+    #4364f7,
+    #ff5447
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.runtime-content p {
+  max-width: 750px;
+
+  margin: 10px 0 0;
+
+  font-size: 13px;
+
+  line-height: 1.9;
+
+  opacity: 0.5;
+}
+
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+.backend-gallery {
+  width: 100%;
+
+  max-width: 1150px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 18px;
+
+  direction: ltr;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.backend-card {
+  width: 100%;
+
+  min-height: 355px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  direction: rtl;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.055),
+      rgba(255, 255, 255, 0.012)
+    );
+
+  border: 1px solid rgba(
+    255,
+    255,
+    255,
+    0.07
+  );
+
+  backdrop-filter: blur(12px);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.backend-card:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(
+    67,
+    100,
+    247,
+    0.4
+  );
+
+  box-shadow:
+    0 18px 40px rgba(
+      0,
+      0,
+      0,
+      0.22
+    );
+}
+
+
+/* =========================================================
+   CARD NUMBER
+========================================================= */
+
+.card-number {
+  position: absolute;
+
+  top: 14px;
+
+  right: 16px;
+
+  z-index: 5;
+
+  direction: ltr;
+
+  font-family: monospace;
+
+  font-size: 9px;
+
+  letter-spacing: 1px;
+
+  opacity: 0.3;
+}
+
+
+/* =========================================================
+   VISUAL AREA
+========================================================= */
+
+.card-visual-wrapper {
+  width: calc(100% - 20px);
+
+  height: 175px;
+
+  margin: 10px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 15px;
+
+  direction: ltr;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(67, 100, 247, 0.10),
+      transparent 68%
+    );
+
+  border: 1px solid rgba(
+    255,
+    255,
+    255,
+    0.045
+  );
+}
+
+
+.visual {
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  direction: ltr;
+}
+
+
+/* =========================================================
+   NODE.JS
+========================================================= */
+
+.node-circle {
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  z-index: 3;
+
+  border-radius: 50%;
+
+  font-family: monospace;
+
+  font-size: 18px;
+
+  font-weight: 800;
+
+  color: white;
+
+  background: linear-gradient(
+    135deg,
+    #0052d4,
+    #4364f7
+  );
+
+  box-shadow:
+    0 0 25px rgba(
+      67,
+      100,
+      247,
+      0.35
+    );
+}
+
+
+.node-line {
+  width: 55px;
+  height: 1px;
+
+  position: absolute;
+
+  background: linear-gradient(
+    90deg,
+    #4364f7,
+    #ff5447
+  );
+
+  transform-origin: center;
+}
+
+
+.line-1 {
+  transform: rotate(28deg);
+}
+
+
+.line-2 {
+  transform: rotate(-28deg);
+}
+
+
+.line-3 {
+  transform: rotate(90deg);
+}
+
+
+.node-dot {
+  width: 15px;
+  height: 15px;
+
+  position: absolute;
+
+  border-radius: 50%;
+
+  background: #ff5447;
+
+  box-shadow:
+    0 0 14px rgba(
+      255,
+      84,
+      71,
+      0.45
+    );
+}
+
+
+.dot-1 {
+  transform: translate(48px, -25px);
+}
+
+
+.dot-2 {
+  transform: translate(48px, 25px);
+}
+
+
+.dot-3 {
+  transform: translate(0, 50px);
+}
+
+
+/* =========================================================
+   EVENT LOOP
+========================================================= */
+
+.event-center {
+  width: 68px;
+  height: 68px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  z-index: 3;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #0052d4,
+    #4364f7
+  );
+
+  font-family: monospace;
+
+  font-size: 9px;
+
+  font-weight: bold;
+
+  box-shadow:
+    0 0 28px rgba(
+      67,
+      100,
+      247,
+      0.35
+    );
+}
+
+
+.event-circle {
+  width: 40px;
+  height: 40px;
+
+  position: absolute;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  font-family: monospace;
+
+  font-size: 8px;
+
+  background: #171b30;
+
+  border: 1px solid rgba(
+    255,
+    255,
+    255,
+    0.13
+  );
+}
+
+
+.event-1 {
+  transform: translate(85px, 0);
+}
+
+
+.event-2 {
+  transform: translate(-85px, 0);
+}
+
+
+.event-3 {
+  transform: translate(0, 75px);
+}
+
+
+.event-arrow {
+  display: none;
+}
+
+
+/* =========================================================
+   EXPRESS
+========================================================= */
+
+.express-visual {
+  gap: 6px;
+
+  direction: ltr;
+
+  font-family: monospace;
+
+  font-size: 8px;
+}
+
+
+.express-box,
+.express-server {
+  padding: 10px 8px;
+
+  border-radius: 7px;
+
+  background: #14182b;
+
+  border: 1px solid rgba(
+    255,
+    255,
+    255,
+    0.1
+  );
+}
+
+
+.express-box {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+
+.express-server {
+  background: linear-gradient(
+    135deg,
+    #0052d4,
+    #4364f7
+  );
+
+  font-weight: bold;
+}
+
+
+.express-arrow {
+  opacity: 0.45;
+}
+
+
+/* =========================================================
+   AUTHENTICATION
+========================================================= */
+
+.lock {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+}
+
+
+.lock-top {
+  width: 42px;
+  height: 34px;
+
+  border: 5px solid #4364f7;
+
+  border-bottom: 0;
+
+  border-radius: 25px 25px 0 0;
+}
+
+
+.lock-body {
+  width: 68px;
+  height: 52px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: linear-gradient(
+    135deg,
+    #0052d4,
+    #4364f7
+  );
+
+  font-size: 22px;
+
+  box-shadow:
+    0 0 25px rgba(
+      67,
+      100,
+      247,
+      0.3
+    );
+}
+
+
+.auth-lines {
+  position: absolute;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+
+  transform: translateX(78px);
+}
+
+
+.auth-lines span {
+  width: 32px;
+  height: 3px;
+
+  border-radius: 10px;
+
+  background: #ff5447;
+}
+
+
+/* =========================================================
+   AUTHORIZATION
+========================================================= */
+
+.permission {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  direction: ltr;
+
+  font-family: monospace;
+
+  font-size: 7px;
+}
+
+
+.permission span,
+.permission strong {
+  padding: 10px 8px;
+
+  border-radius: 6px;
+
+  background: #15192c;
+
+  border: 1px solid rgba(
+    255,
+    255,
+    255,
+    0.1
+  );
+}
+
+
+.permission strong {
+  background: linear-gradient(
+    135deg,
+    #0052d4,
+    #4364f7
+  );
+}
+
+
+.permission-arrow {
+  opacity: 0.4;
+}
+
+
+/* =========================================================
+   REST API
+========================================================= */
+
+.api-visual {
+  gap: 7px;
+
+  direction: ltr;
+
+  font-family: monospace;
+
+  font-size: 7px;
+}
+
+
+.api-client,
+.api-server {
+  padding: 11px 8px;
+
+  border-radius: 7px;
+
+  background: #15192c;
+
+  border: 1px solid rgba(
+    255,
+    255,
+    255,
+    0.1
+  );
+}
+
+
+.api-server {
+  background: linear-gradient(
+    135deg,
+    #0052d4,
+    #4364f7
+  );
+}
+
+
+.api-arrow {
+  display: flex;
+
+  align-items: center;
+
+  gap: 3px;
+
+  opacity: 0.45;
+}
+
+
+/* =========================================================
+   MIDDLEWARE
+========================================================= */
+
+.middleware-visual {
+  flex-direction: column;
+
+  gap: 7px;
+
+  font-family: monospace;
+
+  font-size: 8px;
+}
+
+
+.middleware-item {
+  width: 115px;
+
+  padding: 10px;
+
+  text-align: center;
+
+  border-radius: 7px;
+
+  background: #15192c;
+
+  border: 1px solid rgba(
+    255,
+    255,
+    255,
+    0.1
+  );
+}
+
+
+.middleware-item.active {
+  background: linear-gradient(
+    135deg,
+    #0052d4,
+    #4364f7
+  );
+
+  box-shadow:
+    0 0 20px rgba(
+      67,
+      100,
+      247,
+      0.25
+    );
+}
+
+
+.middleware-arrow {
+  font-size: 10px;
+
+  opacity: 0.35;
+}
+
+
+/* =========================================================
+   MONGODB
+========================================================= */
+
+.database-cylinder {
+  width: 90px;
+
+  position: relative;
+
+  text-align: center;
+
+  direction: ltr;
+
+  font-family: monospace;
+
+  font-size: 8px;
+}
+
+
+.database-top {
+  height: 25px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  z-index: 2;
+
+  border-radius: 50%;
+
+  background: #4364f7;
+}
+
+
+.database-body {
+  height: 62px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #15192c;
+
+  border-left: 1px solid #4364f7;
+
+  border-right: 1px solid #4364f7;
+}
+
+
+.database-bottom {
+  height: 25px;
+
+  margin-top: -12px;
+
+  border-radius: 50%;
+
+  background: #111427;
+
+  border: 1px solid #4364f7;
+}
+
+
+/* =========================================================
+   MONGOOSE
+========================================================= */
+
+.mongoose-visual {
+  gap: 12px;
+
+  direction: ltr;
+
+  font-family: monospace;
+
+  font-size: 8px;
+}
+
+
+.mongoose-model,
+.mongoose-db {
+  padding: 13px 10px;
+
+  border-radius: 7px;
+
+  background: #15192c;
+
+  border: 1px solid rgba(
+    255,
+    255,
+    255,
+    0.1
+  );
+}
+
+
+.mongoose-model {
+  border-color: #4364f7;
+}
+
+
+.mongoose-db {
+  border-color: #ff5447;
+}
+
+
+.mongoose-arrow {
+  opacity: 0.4;
+}
+
+
+/* =========================================================
+   JWT
+========================================================= */
+
+.jwt-token {
+  display: flex;
+
+  overflow: hidden;
+
+  border-radius: 6px;
+
+  direction: ltr;
+
+  font-family: monospace;
+
+  font-size: 7px;
+
+  box-shadow:
+    0 8px 25px rgba(
+      0,
+      0,
+      0,
+      0.25
+    );
+}
+
+
+.jwt-token span {
+  padding: 13px 9px;
+}
+
+
+.jwt-red {
+  background: #ff5447;
+}
+
+
+.jwt-purple {
+  background: #6d4aff;
+}
+
+
+.jwt-blue {
+  background: #0052d4;
+}
+
+
+/* =========================================================
+   ASYNC / AWAIT
+========================================================= */
+
+.async-visual {
+  flex-direction: column;
+
+  gap: 8px;
+
+  font-family: monospace;
+}
+
+
+.async-code {
+  padding: 13px 24px;
+
+  border-radius: 7px;
+
+  background: #15192c;
+
+  border: 1px solid #4364f7;
+
+  font-size: 9px;
+}
+
+
+.async-code span {
+  color: #ff5447;
+
+  font-weight: bold;
+}
+
+
+.async-arrow {
+  opacity: 0.35;
+}
+
+
+.async-result {
+  padding: 10px 20px;
+
+  border-radius: 7px;
+
+  background: linear-gradient(
+    135deg,
+    #0052d4,
+    #4364f7
+  );
+
+  font-size: 8px;
+}
+
+
+/* =========================================================
+   HTTP
+========================================================= */
+
+.http-visual {
+  gap: 7px;
+
+  direction: ltr;
+
+  font-family: monospace;
+
+  font-size: 7px;
+}
+
+
+.http-method,
+.http-server,
+.http-response {
+  padding: 12px 9px;
+
+  border-radius: 7px;
+
+  background: #15192c;
+
+  border: 1px solid rgba(
+    255,
+    255,
+    255,
+    0.1
+  );
+}
+
+
+.http-method {
+  border-color: #0052d4;
+}
+
+
+.http-server {
+  background: linear-gradient(
+    135deg,
+    #0052d4,
+    #4364f7
+  );
+}
+
+
+.http-response {
+  border-color: #ff5447;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.card-content {
+  padding: 12px 18px 20px;
+
+  direction: rtl;
+
+  text-align: right;
+}
+
+
+.card-content h3 {
+  margin: 0 0 7px;
+
+  direction: ltr;
+
+  text-align: left;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 20px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.3px;
+}
+
+
+.card-content p {
+  margin: 0;
+
+  font-size: 11.5px;
+
+  line-height: 1.75;
+
+  opacity: 0.52;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .backend-gallery {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    max-width: 760px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .backend-page {
+    padding: 60px 15px;
+  }
+
+
+  .backend-gallery {
+    grid-template-columns: 1fr;
+
+    max-width: 400px;
+
+    gap: 16px;
+  }
+
+
+  .backend-header {
+    margin-bottom: 50px;
+  }
+
+
+  .backend-header h1 {
+    font-size: 58px;
+  }
+
+
+  .backend-header p {
+    font-size: 12px;
+  }
+
+
+  .runtime-content {
+    padding-right: 50px;
+
+    padding-left: 5px;
+  }
+
+
+  .runtime-content h2 {
+    font-size: 21px;
+
+    line-height: 1.8;
+  }
+
+
+  .runtime-content p {
+    font-size: 12px;
+  }
+
+
+  .backend-card {
+    min-height: 350px;
+  }
+
+
+  .card-visual-wrapper {
+    height: 165px;
+  }
+
+
+  .card-content h3 {
+    font-size: 19px;
+  }
+
+
+  .card-content p {
+    font-size: 11.5px;
+  }
+
+}
