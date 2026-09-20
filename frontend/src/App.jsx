@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
-
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import ScrollToTopButton from "./components/ScrollToTopButton/ScrollToTopButton";
 import {
   NameAndEmage,
   Navbare,
@@ -44,30 +45,32 @@ function Home() {
 
 function App() {
   return (
-    <Routes>
+    <>
+      <ScrollToTop />
+       <ScrollToTopButton />
+      <Routes>
+        {/* الصفحة الرئيسية */}
+        <Route path="/" element={<Home />} />
 
-      {/* الصفحة الرئيسية */}
-      <Route path="/" element={<Home />} />
+        {/* صفحة Website المستقلة */}
+        <Route
+          path="/website"
+          element={<Websites />}
+        />
 
-      {/* صفحة Website المستقلة */}
-      <Route
-  path="/website"
-  element={<Websites />}
-/>
+        {/* صفحة App المستقلة */}
+        <Route
+          path="/app"
+          element={<AppPage />}
+        />
 
-      {/* صفحة App المستقلة */}
-      <Route
-        path="/app"
-        element={<AppPage />}
-      />
-
-      {/* صفحة BackEnd المستقلة */}
-      <Route
-        path="/backend"
-        element={<BackEnd />}
-      />
-
-    </Routes>
+        {/* صفحة BackEnd المستقلة */}
+        <Route
+          path="/backend"
+          element={<BackEnd />}
+        />
+      </Routes>
+    </>
   );
 }
 
